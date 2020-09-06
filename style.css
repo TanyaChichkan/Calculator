@@ -1,0 +1,109 @@
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.calculator {
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 20px;
+
+  grid-gap: 5px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: whitesmoke;
+  border-radius: 25px;
+  border: 1px solid grey;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  color: #000000;
+  font-size: 25px;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 1px;
+  background-color: #ece5e5;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: 1px solid grey;
+  -webkit-box-shadow: -1px 5px 6px 0px #6b6c62;
+  box-shadow: -1px 5px 6px 0px #6b6c62;
+}
+
+input {
+  width: 100%;
+  border: none;
+  grid-column: 1/-1;
+  height: 50px;
+  padding: 0;
+  border: 1px solid #ddd;
+  font-size: 25px;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  border: 1px solid #bbb;
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.earase {
+  grid-column: 3 / span 2;
+}
+
+.delete {
+  grid-column: 1 / span 2;
+}
+
+.zero {
+  grid-column: 2/4;
+  background-color: #d2cccc;
+}
+
+.equals {
+  grid-column: 4;
+  grid-row: 6/8;
+  background-color: #b48d8d;
+}
+
+.operation.decor {
+  background-color: #d2cccc;
+}
+
+.operation.deco,
+.brackets.deco {
+  background-color: #c3b0b0;
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.open-icon {
+  position: absolute;
+  fill: black;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.number.decor {
+  background-color: #d2cccc;
+}
